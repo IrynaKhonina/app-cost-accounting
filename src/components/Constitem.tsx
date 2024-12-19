@@ -1,15 +1,26 @@
  import "./Constitem.css"
- 
- export const ConstItem =()=> {
+
+ type CostItemProps = {
+     date: Date;
+     description: string;
+     amount: number;
+ };
+
+
+export const ConstItem = (props: CostItemProps) => {
+    const {
+        date,
+        description,
+        amount,
+    } = props
     return (
       <div className="cost-item">
-        <div>март 2021 12</div>
+        <div>{date.toISOString()}</div>
         <div className="cost-item__description">
-        <h2>Холодильник</h2>
-        <div className="cost-item__price">$999.99</div>
+        <h2>{description}</h2>
+        <div className="cost-item__price">${amount}</div>
         </div>
     </div>
     );
   }
 
-  
