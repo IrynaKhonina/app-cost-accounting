@@ -1,5 +1,6 @@
-import { ConstItem } from "./components/Constitem";
 
+import {Cost} from "./components/Cost";
+import "./components/Cost.css"
 
 
 function App() {
@@ -24,22 +25,13 @@ function App() {
 
   return (
     <div>
-      <h1>поехали</h1>
-        <ConstItem
-            date={costs[0].date}
-            description={costs[0].description}
-            amount={costs[0].amount}
+     <h1>Заметки</h1>
+      <div className="costs">
+        <Cost costs={costs}
         />
-        <ConstItem
-            date={costs[1].date}
-            description={costs[1].description}
-            amount={costs[1].amount}
-        />
-        <ConstItem
-            date={costs[2].date}
-            description={costs[2].description}
-            amount={costs[2].amount}
-        />
+
+      </div>
+
     </div>
   );
 }
