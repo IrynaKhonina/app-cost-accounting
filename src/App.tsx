@@ -27,7 +27,7 @@ function App() {
     <div>
      <h1>Заметки</h1>
       <div className="costs">
-        <Cost costs={costs}
+        <Cost costs = {costs}
         />
 
       </div>
