@@ -1,7 +1,8 @@
 import "./Card.css";
+import {ReactNode} from "react";
 
 type Props = {
-    children?: React.ReactNode;
+    children?: ReactNode;
     className?: string; // Добавляем свойство className в тип Props
 };
 

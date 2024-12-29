@@ -1,6 +1,6 @@
 
-import {Cost} from "./components/Cost";
-import "./components/Cost.css"
+import {Cost} from "./components/Costs/Cost";
+import "./components/Costs/Cost.css"
 
 
 function App() {
