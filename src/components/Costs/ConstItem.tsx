@@ -1,6 +1,7 @@
 import "./ConstItem.css";
 import { CostDate } from "./CostDate";
 import { Card } from "../UI/Card";
+import {useState} from "react";
 
 export type CostItemProps = {
     date: Date;
@@ -9,9 +10,11 @@ export type CostItemProps = {
 };
 
 export const CostItem = (props: CostItemProps) => {
-    const { date, description, amount } = props;
-    const changeDiscriptionHandler = () =>{
+    const { date, amount } = props;
+    const [description, setDescription] = useState(props.description);
 
+    const changeDescriptionHandler = () =>{
+    setDescription ("New cost")
     }
     return (
         <Card className="cost-item">
@@ -20,7 +23,7 @@ export const CostItem = (props: CostItemProps) => {
                 <h2>{description}</h2>
                 <div className="cost-item__price">${amount}</div>
             </div>
-            <button onClick={changeDiscriptionHandler}>Изменить описание</button>
+            <button onClick={changeDescriptionHandler}>Изменить описание</button>
         </Card>
     );
 };
