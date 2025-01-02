@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/app-cost-accounting/static/css/main.5e02af96.css",
-    "main.js": "/app-cost-accounting/static/js/main.6ebd8f68.js",
+    "main.css": "/app-cost-accounting/static/css/main.6a7457d8.css",
+    "main.js": "/app-cost-accounting/static/js/main.1465600e.js",
     "index.html": "/app-cost-accounting/index.html",
-    "main.5e02af96.css.map": "/app-cost-accounting/static/css/main.5e02af96.css.map",
-    "main.6ebd8f68.js.map": "/app-cost-accounting/static/js/main.6ebd8f68.js.map"
+    "main.6a7457d8.css.map": "/app-cost-accounting/static/css/main.6a7457d8.css.map",
+    "main.1465600e.js.map": "/app-cost-accounting/static/js/main.1465600e.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e02af96.css",
-    "static/js/main.6ebd8f68.js"
+    "static/css/main.6a7457d8.css",
+    "static/js/main.1465600e.js"
   ]
 }
