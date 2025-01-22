@@ -2,27 +2,34 @@ import React, { useState } from "react";
 import "./CostForm.css";
 
 export const CostForm: React.FC = () => {
-    const [name, setName] = useState<string>("");
-    const [amount, setAmount] = useState<string>("");
-    const [date, setDate] = useState<string>("");
+    const [inputName, setInputName] = useState<string>("");
+    const [inputAmount, setInputAmount] = useState<string>("");
+    const [inputDate, setInputDate] = useState<string>("");
 
     const nameChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setName(event.target.value);
+        setInputName(event.target.value);
     };
 
     const amountChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setAmount(event.target.value);
+        setInputAmount(event.target.value);
     };
 
     const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setDate(event.target.value);
+        setInputDate(event.target.value);
     };
 
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
-        console.log({ name, amount, date });
+
         // Здесь можно добавить логику для обработки данных формы
     };
+
+
+    const constData ={
+        name: inputName,
+        amount: inputAmount,
+        date: new Date (inputDate)
+    }
 
     return (
         <div>
@@ -30,7 +37,7 @@ export const CostForm: React.FC = () => {
                 <div className="new-cost__controls">
                     <div className="new-cost__control">
                         <label>Название</label>
-                        <input type="text" value={name} onChange={nameChangeHandler} />
+                        <input type="text" value={inputName} onChange={nameChangeHandler} />
                     </div>
                     <div className="new-cost__control">
                         <label>Сумма</label>
@@ -38,7 +45,7 @@ export const CostForm: React.FC = () => {
                             type="number"
                             min="0.01"
                             step="0.01"
-                            value={amount}
+                            value={inputAmount}
                             onChange={amountChangeHandler}
                         />
                     </div>
@@ -48,7 +55,7 @@ export const CostForm: React.FC = () => {
                             type="date"
                             min="2019-01-01"
                             max="2024-12-31"
-                            value={date}
+                            value={inputDate}
                             onChange={dateChangeHandler}
                         />
                     </div>
